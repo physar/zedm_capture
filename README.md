@@ -64,7 +64,7 @@ git clone git://git.ti.com/processor-sdk-vision/jacinto_ros_perception.git
 
 The directory contains some tools and the code for both ROS1 and ROS2. To build the ROS1 driver, you could execture the commands:
 
-``bash
+```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 ln -s ~/git/jacinto_ros1_perception/ros1 jacinto_ros1_perception
