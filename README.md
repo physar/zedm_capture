@@ -70,7 +70,7 @@ cd ~/catkin_ws/src
 ln -s ~/git/jacinto_ros1_perception/ros1 jacinto_ros1_perception
 ln -s ~/git/jacinto_ros1_perception/cmake .
 ln -s ~/git/jacinto_ros1_perception/tools .
-
+```
 
 
 
