@@ -1,4 +1,4 @@
-<img src=https://cdn.stereolabs.com/assets/images/logo/logo_stereolabs.svg alt="StereoLabs">
+<img src=https://cdn.stereolabs.com/assets/images/logo/logo_stereolabs.svg width=100 alt="StereoLabs">
 
 # zedm_capture
 This is an unofficial stereo camera ROS node for the [ZED-M camera][https://www.stereolabs.com/zed-mini/], based on OpenCV VideoCapture API. The ROS node publishes left and right raw images and their camera_info.
@@ -7,7 +7,7 @@ The official [zed-ros-wrapper][https://github.com/stereolabs/zed-ros-wrapper] co
 
 The ZED-M is the mini-version of the range of stereo-cameras provided by [StereoLabs][https://www.stereolabs.com/]. The ZED Mini features dual high-speed 2K image sensors and a 110 degree field of view. With an eye separation of 63 mm, the camera senses depth from 0.1 meters to 12 meters, which is very usefull near range in robotics. With both cameras in Ultra-Depth mode, the range of the camera can be increased to 20 meters. 
 
-(https://cdn.stereolabs.com/blog/wp-content/uploads/2017/09/zed-mini.jpg)
+<img src=https://cdn.stereolabs.com/blog/wp-content/uploads/2017/09/zed-mini.jpg width=300 alt="ZED-M">
 
 This ROS node is mainly based on the work of Texas Instruments, with their sensor drivers in their [Robotics SDK][https://software-dl.ti.com/jacinto7/esd/robotics-sdk/08_01_00/docs/source/README.html#overview]. There are three main differences:
 
