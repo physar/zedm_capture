@@ -73,5 +73,37 @@ ln -s ~/git/jacinto_ros1_perception/tools .
 python3 -m pip install -r ~/git/jacinto_ros1_perception/tools/stereo_camera/requirements.txt
 ```
 
+Now build the package with:
 
+```bash
+cd ~/catkin_ws/src
+catkin_make --force-cmake
+source devel/setup.bash
+```
 
+Download the calibration for your ZED camera with the command:
+
+```bash
+cd ~/catkin_ws/src
+cd tools/stereo_camera
+./download_calib_file.sh <serial_number>
+cp  <serial_number>.conf ../../zedm_capture/tools/stereo_camera/conf
+```
+
+Now you can generate the information for the camera_info, including the undistortion & rectification look-up-table (LUT) files.
+
+```bash
+cd ~/catkin_ws/src
+cd ../../zedm_capture/tools/stereo_camera
+python3 generate_rect_map.py -i SNxxxx.conf -m <camera_mode> -p <output_folder_path>
+```
+
+Now you can start the ZED camera node with:
+
+```bash
+cd ~/catkin_ws/src
+source devel/setup.bash
+roslaunch zed_capture zedm_capture.launch zed_sn_str:=SNxxxxx
+```
+
+For more information, see the original sensor driver page from Texas Instruments [Robotics SDK](https://git.ti.com/cgit/processor-sdk-vision/jacinto_ros_perception/tree/ros1/drivers/zed_capture/README.md).
