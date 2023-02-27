@@ -277,11 +277,12 @@ def main(calib_file, camera_mode, driver_path):
 if __name__ == "__main__":
     # input argument parser
     parser = argparse.ArgumentParser(description='ZED camera camera_info & LCD LUT generation tool')
-    parser.add_argument('--input', '-i', type=str, default='SN5867575.conf',
+    parser.add_argument('--input', '-i', type=str, default='SN14962641.conf',
+#    parser.add_argument('--input', '-i', type=str, default='SN5867575.conf',
         help='Factory calibration data filename for ZED camera. The calibration data file should be placed under <zed_capture>/config.')
     parser.add_argument('--mode', '-m', type=str, default=None,
         help="Camera mode. Valid camera mode: 2K, FHD, FHD2, HD, HD2, VGA")
-    parser.add_argument('--path', '-p', type=str, default='..',
+    parser.add_argument('--path', '-p', type=str, default='.',
         help="Path to zed_capture driver node")
     args = parser.parse_args()
 
